@@ -20,8 +20,7 @@ import torchaudio as ta
 from functools import lru_cache
 from typing import Optional
 
-from ..s3tokenizer import S3_SR, SPEECH_VOCAB_SIZE
-from ..tokenizer import AudioTokenizer
+from ..tokenizer import AudioTokenizer, S3_SR, SPEECH_VOCAB_SIZE
 from .const import S3GEN_SR
 from .flow import CausalMaskedDiffWithXvec
 from .xvector import CAMPPlus
