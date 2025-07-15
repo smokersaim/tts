@@ -3,7 +3,7 @@ from tokenizers import Tokenizer
 
 from .config import SOT, EOT, UNK, SPACE
 
-class EnTokenizer:
+class TextTokenizer:
     def __init__(self, vocab_file_path):
         self.tokenizer: Tokenizer = Tokenizer.from_file(vocab_file_path)
         self._check_vocab()

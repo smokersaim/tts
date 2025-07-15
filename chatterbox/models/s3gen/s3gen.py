@@ -20,7 +20,8 @@ import torchaudio as ta
 from functools import lru_cache
 from typing import Optional
 
-from ..s3tokenizer import S3_SR, SPEECH_VOCAB_SIZE, S3Tokenizer
+from ..s3tokenizer import S3_SR, SPEECH_VOCAB_SIZE
+from ..tokenizer import AudioTokenizer
 from .const import S3GEN_SR
 from .flow import CausalMaskedDiffWithXvec
 from .xvector import CAMPPlus
@@ -52,7 +53,7 @@ class S3Token2Mel(torch.nn.Module):
     """
     def __init__(self):
         super().__init__()
-        self.tokenizer = S3Tokenizer("speech_tokenizer_v2_25hz")
+        self.tokenizer = AudioTokenizer("speech_tokenizer_v2_25hz")
         self.mel_extractor = mel_spectrogram # TODO: make it a torch module?
         self.speaker_encoder = CAMPPlus()  # use default args
 
