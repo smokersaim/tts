@@ -8,11 +8,11 @@ import torch.nn.functional as F
 from huggingface_hub import hf_hub_download
 from safetensors.torch import load_file
 
-from .models.t3 import T3
-from .models.s3gen import S3GEN_SR, S3Gen
-from .models.tokenizer import TextTokenizer, S3_SR, drop_invalid_tokens
-from .models.voice_encoder import VoiceEncoder
-from .models.t3.modules.cond_enc import T3Cond
+from .modules.t3 import T3
+from .modules.s3gen import S3GEN_SR, S3Gen
+from .modules.tokenizer import TextTokenizer, S3_SR, drop_invalid_tokens
+from .modules.voice_encoder import VoiceEncoder
+from .modules.t3.modules.cond_enc import T3Cond
 
 
 REPO_ID = "ResembleAI/chatterbox"
