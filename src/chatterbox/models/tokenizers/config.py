@@ -1,0 +1,5 @@
+SOT = "[START]"
+EOT = "[STOP]"
+UNK = "[UNK]"
+SPACE = "[SPACE]"
+SPECIAL_TOKENS = [SOT, EOT, UNK, SPACE, "[PAD]", "[SEP]", "[CLS]", "[MASK]"]
