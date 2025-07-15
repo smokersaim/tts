@@ -1,7 +1,7 @@
 import random
 import numpy as np
 import torch
-from chatterbox.src.chatterbox.tts import ChatterboxTTS
+from chatterbox.tts import ChatterboxTTS
 import gradio as gr
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -143,4 +143,4 @@ with gr.Blocks() as demo:
         outputs=[audio_output],
     )
 
-demo.launch(mcp_server=True)
+demo.launch(share=True)
